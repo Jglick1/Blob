@@ -1,0 +1,99 @@
+/**
+ * Created by Bradford on 11/13/2015.
+ */
+
+public class blob_main_character implements PlayableCharacter {
+    int speed;
+    int power;
+    int level;
+    int stretch;
+    int size;
+    int width;
+    int length;
+    int posx;
+    int posy;
+    int lives;
+    int slimeFactor;
+
+
+    public blob_main_character() {
+        this.speed = 1;
+        this.power = 1;
+        this.level = 1;
+        this.stretch = 1;
+        this.size = 1;
+        this.width = 1;
+        this.length = 1;
+        posx = 0;
+        posy = 0;
+        lives = 1;
+    }
+    @Override
+    public void move(int i) {
+        if (this.lives > 0) {
+            switch (i) {
+                case 1:
+                    this.posy = this.posy + this.speed;
+                    break;
+                case 2:
+                    this.posy = this.posy - this.speed;
+                    break;
+                case 3:
+                    this.posx = this.posx + this.speed;
+                    break;
+                case 4:
+                    this.posx = this.posx - this.speed;
+                    break;
+
+            }
+        }
+    }
+
+    public int getSlimeFactor() {
+        return slimeFactor;
+    }
+
+    public int getLives() {
+        return lives;
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    public int getWidth() {
+
+        return width;
+    }
+
+    public int getStretch() {
+        return stretch;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public int getPower() {
+        return power;
+    }
+
+    @Override
+    public int getSpeed() {
+        return speed;
+    }
+
+    @Override
+    public int getPosx() {
+        return posx;
+    }
+
+    @Override
+    public int getPosy() {
+        return posy;
+    }
+}
