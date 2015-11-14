@@ -1,0 +1,10 @@
+/**
+ * Created by Bradford on 11/13/2015.
+ */
+public interface PlayableCharacter {
+    public void move(int i);
+    public int getSpeed();
+    public int getPosx();
+    public int getPosy();
+
+}
